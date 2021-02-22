@@ -85,7 +85,7 @@ print(__doc__)    #著者信息
 #　global , nonlocal
 # globals(), locals()
 
-
+# nonlocal 关键字用于在嵌套函数内部使用变量，其中变量不应属于内部函数。
 def func():
     x = 1
     def func2():
