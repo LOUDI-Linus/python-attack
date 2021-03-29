@@ -1,0 +1,10 @@
+setup.py
+src/Super_Game.egg-info/PKG-INFO
+src/Super_Game.egg-info/SOURCES.txt
+src/Super_Game.egg-info/dependency_links.txt
+src/Super_Game.egg-info/requires.txt
+src/Super_Game.egg-info/top_level.txt
+src/pack01/__init__.py
+src/pack01/model01.py
+src/pack02/__init__.py
+src/pack02/model02.py
