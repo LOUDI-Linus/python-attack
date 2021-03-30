@@ -9,11 +9,20 @@
 
 # 把XXProj目录添加成sources root实际上做了什么
 # sys.path
-import sys
-import os
-print(sys.path)
-# 定义项目的目录
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import sys,os
+# print(sys.path)
+print(__file__)
+print(os.path.abspath(__file__))
+print(os.path.dirname(os.path.abspath(__file__)))
+print(os.path.dirname(__file__))
+
+# 定义项目目录
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR1 = os.path.dirname(os.path.abspath(__file__))
+
+
+print(BASE_DIR)
+print(BASE_DIR1)
 # sys.path.append(BASE_DIR)
 #
 #
