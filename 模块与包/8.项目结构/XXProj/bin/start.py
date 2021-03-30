@@ -23,12 +23,13 @@ BASE_DIR1 = os.path.dirname(os.path.abspath(__file__))
 
 print(BASE_DIR)
 print(BASE_DIR1)
-# sys.path.append(BASE_DIR)
+# 添加到环境变量 !!!!!
+sys.path.append(BASE_DIR)
 #
 #
-# from src import main
+from src import main
 # from conf import settings
-# main.run()
+main.run()
 
 
 """
