@@ -5,9 +5,15 @@
 @desc:
 """
 
-# a = float(input("请输入一个数据："))
-# b = float(input("请输入一个数据："))
-# print(a+b)
+# try:
+#     a = float(input("请输入一个数据："))
+#     b = float(input("请输入一个数据："))
+#     print(a + b)
+#
+# except Exception as ex:
+#     print(ex)
+#     print("出错")
+
 
 
 # try:
@@ -55,14 +61,14 @@
 
 #
 # print("不管怎么样，程序都会正常地执行！退出码0")
-# """
-# 在try部分，发生任何错误都会去except匹配 =>
-#     except抓捕的NameError,现在发生的错误ValueError
-# 在进行异常捕获时，注意错误类型匹配
-#     当前发生的错误 ==  except 错误类型          捕获-> 处理
-#     当前发生的错误 是  except 错误类型的子类    捕获-> 处理
-# 如果没有匹配上错误类型，那么程序还是会异常退出。
-# """
+"""
+在try部分，发生任何错误都会去except匹配 =>
+    except抓捕的NameError,现在发生的错误ValueError
+在进行异常捕获时，注意错误类型匹配
+    当前发生的错误 ==  except 错误类型          捕获-> 处理
+    当前发生的错误 是  except 错误类型的子类    捕获-> 处理
+如果没有匹配上错误类型，那么程序还是会异常退出。
+"""
 
 
 
@@ -112,7 +118,7 @@
     建议 => 先写最小的异常类，然后再写父类异常类
 """
 
-
+#
 # # else子句
 # try:
 #     # ValueError => 输入的数据不是int或float数字
@@ -134,22 +140,42 @@
 
 
 # finally子句
-try:
-    # ValueError => 输入的数据不是int或float数字
-    a = float(input("请输入一个数据："))
-    b = float(input("请输入一个数据："))
-    print(a+b)
-    # ZeroDivisionError b输入的是0
-    print(a/b)
-except ValueError as ex:
-    print(ex)
-    print("输入的数据必须是int或float的字符串！")
-except ZeroDivisionError as ex:
-    print("输入的除数不能为0")
-except Exception as ex:
-    print("出现了意料之外的错误")
-else:
-    print("运行到这里，表示没有发生过异常哦~！")
-finally:
-    print("不管是否发生异常，都会执行这段代码")
-# print("不管是否发生异常，都会执行这段代码")
+# try:
+#     # ValueError => 输入的数据不是int或float数字
+#     a = float(input("请输入一个数据："))
+#     b = float(input("请输入一个数据："))
+#     print(a+b)
+#     # ZeroDivisionError b输入的是0
+#     print(a/b)
+# except ValueError as ex:
+#     print(ex)
+#     print("输入的数据必须是int或float的字符串！")
+# except ZeroDivisionError as ex:
+#     print("输入的除数不能为0")
+# except Exception as ex:
+#     print("出现了意料之外的错误")
+# else:
+#     print("运行到这里，表示没有发生过异常哦~！")
+# finally:
+#     print("不管是否发生异常，都会执行这段代码")
+# print("不管是否发生异常，都会执行这段代码11")
+
+
+def grade(score):
+    if isinstance(score, str) and score.isdigit():
+        score = float(score)
+
+    if isinstance(score, int) or isinstance(score, float) and 0<= score <= 100:
+        if score >= 90:
+            return "A"
+        elif score >= 80:
+            return "B"
+        else:
+            return "C"
+    else:
+        raise ValueError("参数必须是0~100的整数")
+
+
+user = input("请输入: ")
+
+print(grade(user))

@@ -88,32 +88,32 @@ print(a+b)
 
 
 # while+print
-def grade(score):
-    """
-    不要在函数中写input,而是通过传参的方式将数据给函数
-    """
-    if score >=90:
-        return "A"
-    elif score >=70:
-        return "B"
-    elif score >=60:
-        return "C"
-    else:
-        return "D"
-
-
-while True:
-    score = input("请输入成绩")
-    if not score.isdigit():
-        print("参数必须是[0~100]之间的整数或浮点数")
-    else:
-        score = float(score)
-        if score > 100 or score < 0:
-            print("参数必须是[0~100]之间的整数或浮点数")
-        else:
-            break
-
-print(grade(score))
+# def grade(score):
+#     """
+#     不要在函数中写input,而是通过传参的方式将数据给函数
+#     """
+#     if score >=90:
+#         return "A"
+#     elif score >=70:
+#         return "B"
+#     elif score >=60:
+#         return "C"
+#     else:
+#         return "D"
+#
+#
+# while True:
+#     score = input("请输入成绩")
+#     if not score.isdigit():
+#         print("参数必须是[0~100]之间的整数或浮点数")
+#     else:
+#         score = float(score)
+#         if score > 100 or score < 0:
+#             print("参数必须是[0~100]之间的整数或浮点数")
+#         else:
+#             break
+#
+# print(grade(score))
 
 
 

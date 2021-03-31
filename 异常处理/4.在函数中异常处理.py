@@ -14,7 +14,7 @@
 #         print("always")
 #     # 发现有一个异常
 #     return "ok"
-#
+# # task()
 # print(task())
 # """
 # always
@@ -72,7 +72,7 @@ def task():
         return "else"
     finally:
         print("finally")
-        # return "finally2"
+        return "finally2"
     return "ok"
 
 
